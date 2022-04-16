@@ -1,4 +1,4 @@
-# AI Course_project
+# AI Course Project
 
 # Fall 2021
 
