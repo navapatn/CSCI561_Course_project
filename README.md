@@ -1,14 +1,14 @@
 # AI Course_project
 
-#Fall 2021
+# Fall 2021
 
-##Project 1
+## Project 1
 Path-Finding Algorithms (BFS, DFS, A\*) in a 3D maze <br />
 ![3D Maze](./image/3D_maze.png)
 <br />
 For this assignment we applied AI search techniques to solve sophisticated 3D mazes. Each 3D maze is a grid of points with (x,y,z) locations, there are 18 actions our agent can make (see assignment pdf for more details). The program should output the optimal path (according to the search algorithm).
 
-##Project 2
+## Project 2
 Little-GO agent on a 5x5 GO board <br />
 ![Little-GO Board](./image/little_GO.png)
 <br />
@@ -16,7 +16,7 @@ This assignment was open-ended and allowed us to use any search, game playing, o
 
 Note: I wanted to try using Q-learning and estimating the function using Neural Network, but with time constraint I did not end up trying it
 
-##Project 3
+## Project 3
 Multi-layer perceptron (MLP) Neural Network from scratch using MNIST dataset
 <br />
 ![MNIST](./image/mnist.png)
