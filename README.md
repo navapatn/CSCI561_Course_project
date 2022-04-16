@@ -1,6 +1,4 @@
-# AI Course Project
-
-# Fall 2021
+# Course Projects
 
 ## Project 1
 Path-Finding Algorithms (BFS, DFS, A\*) in a 3D maze <br />
