@@ -19,5 +19,5 @@ Multi-layer perceptron (MLP) Neural Network from scratch using MNIST dataset
 <br />
 ![MNIST](./image/mnist.png)
 <br />
-implement a multi-layer perceptron (MLP) neural network and use it to classify hand-written digits shown from scrach (machine learning libraries are NOT allowed (including
+implement a multi-layer perceptron (MLP) neural network and use it to classify hand-written digits shown from scratch (machine learning libraries are NOT allowed (including
 tensorflow (v1&v2), caffe, pytorch, torch, cxxnet, and mxnet)
