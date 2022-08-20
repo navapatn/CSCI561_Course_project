@@ -53,3 +53,5 @@ image.
 *	Alpha-Beta
 *	Q-learning
 *	Championship
+
+The results were calculated on multiple runs in a simulation program, and the agent achieved about 90% win-rate total
