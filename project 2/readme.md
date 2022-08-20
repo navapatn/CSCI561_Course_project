@@ -24,47 +24,32 @@ To evaluate game states in each turn, we need multiple functions to do that.
 
 these functions act as a data pulling function to give the AI agents a set of data in each turn
 
-
 ## Technique 1: Alpha-Beta Pruning
 
-After loading raw data, I performed data normalization so that all features have equal weight. Otherwise feature, for example, Income would be considered much more important compared to Education.
+This method is used to select the best path for us and the worst path for the opponent. Heuristic function is being used to calculate points of each turn.
 
-## Segmentation via Clustering using Customer Data
-This section is to perform segmentation to see how our customers can be grouped.
-After normalizing the data, I performed clustering as a preliminary analysis of the data to see how the groups would look like from these algorithms
+The Heuristic function is defined as (#number of our color - #number of opponent color after picking move x).
 
-I tried tree different models:
-*	**Hierarchical Clustering** – to get an idea of the ideal number of clusters
-*	**K-mean Clustering** – after getting a decent idea of the expected clusters, perform K-mean to see how the groups result look like.
-*	**K-mean Clustering with PCA** – to reduce number of features to only the most important ones.
+Image.
 
-![Hierarchicalresult](/images/ca-Hier.JPG)
-![KmeanWCSS](/images/ca-kmeanwcss.JPG)
-![Kmeanclusters](/images/ca-kmean.JPG)
-
+The algorithm will recursively calculate point after making all possible moves and select best outcome for us and worst outcome for the opponent.
 
 ## Technique 2: Q-learning
-I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
-![EDA1](/images/ca-EDA1.JPG)
-![EDA2](/images/ca-EDA2.JPG)
-![EDA3](/images/ca-EDA3.JPG)
-![EDA4](/images/ca-EDA4.JPG)
-![EDA5](/images/ca-EDA5.JPG)
+This method is also tested to select best move at certain states by learning from multiple board scenarios.
+
+Q-valued is re-calculated every time the game ends, if the agent lose, it will backpropagate negative value to all previous states.
+However, if the agent win the game, it will backpropagate positive value to all previous states. This method requires multiple rounds of training to make the agent able to learn all possible states from the board.
+
+image.
 
 
 ## Results
 
-*	**Logistic Regression** - is used to calculate purchase probability relative to price elasticity.
-
-Price Elasticity = % change in purchase probability / % change in price.
-
-Inelastic, we increase the price of the product since it affects the probability of buying less than 1% per 1% price change.
-
-Elastic, we decrease the price of the product since it affects the probability of buying less than 1% per 1% price change.
-
-![purchaseprob](/images/ca-purchaseprob.JPG)
-
-This way we know which products we should increase/decrease in price or add promotions to them
-
-This can be done by customer segments/brands/etc.
+* The agent competed against **six different types of agent**
+*	random
+*	greedy
+*	aggressive
+*	Alpha-Beta
+*	Q-learning
+*	Championship
