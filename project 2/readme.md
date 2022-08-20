@@ -30,7 +30,8 @@ This method is used to select the best path for us and the worst path for the op
 
 The Heuristic function is defined as (#number of our color - #number of opponent color after picking move x).
 
-Image.
+![alphabeta](/images/abpruning.png)
+![alphabeta](/images/alphabeta.JPG)
 
 The algorithm will recursively calculate point after making all possible moves and select best outcome for us and worst outcome for the opponent.
 
@@ -41,7 +42,7 @@ This method is also tested to select best move at certain states by learning fro
 Q-valued is re-calculated every time the game ends, if the agent lose, it will backpropagate negative value to all previous states.
 However, if the agent win the game, it will backpropagate positive value to all previous states. This method requires multiple rounds of training to make the agent able to learn all possible states from the board.
 
-image.
+![alphabeta](/images/qlearning.png)
 
 
 ## Results
